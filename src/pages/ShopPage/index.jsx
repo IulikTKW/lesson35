@@ -4,9 +4,11 @@ import Typography from "../../components/Typography";
 
 import './styles.css'
 import { ProductContext } from "../../context/productContext";
+import { CartContext } from "../../context/cartContext";
 
 const ShopPage = () => {
     const {products, getProducts} = useContext(ProductContext)
+    const {handleAddToCard} = useContext(CartContext)
 
     useEffect(() => {
         getProducts()
@@ -23,6 +25,7 @@ const ShopPage = () => {
                         price={price}
                         img={img}
                         id={id}
+                        iconOnClick={(amount) => handleAddToCard({title, price, img, id, amount})}
                     />
                 })}
             </div>

@@ -7,11 +7,21 @@
     padding: 16px;
     border: 2px solid var(--primary-color);
     border-radius: 6px;
-    width: 250px;
+    width: 150px;
     cursor: pointer;
+    gap: 16px;
 }
 
 .card-img {
     width: 100%;
     box-sizing: border-box;
+}
+
+.card-input {
+    display: flex;
+    gap: 16px;
+     
+    input {
+        width: 30px;
+    }
 }
